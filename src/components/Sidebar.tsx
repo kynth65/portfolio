@@ -62,7 +62,7 @@ const Sidebar = ({ activeSection, onSectionChange }: SidebarProps) => {
 
           <div className="social-links">
             <a
-              href="https://github.com"
+              href="https://github.com/kynth65"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -70,7 +70,7 @@ const Sidebar = ({ activeSection, onSectionChange }: SidebarProps) => {
               GitHub
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/kynthanthonymarcaida/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
