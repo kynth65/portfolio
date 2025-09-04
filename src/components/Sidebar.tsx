@@ -1,19 +1,19 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Sidebar.css";
 
 interface SidebarProps {
   activeSection: string;
-  onSectionChange: (section: string) => void;
 }
 
-const Sidebar = ({ activeSection, onSectionChange }: SidebarProps) => {
+const Sidebar = ({ activeSection }: SidebarProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { id: "home", label: "Home" },
-    { id: "about", label: "About" },
-    { id: "projects", label: "Projects" },
-    { id: "contact", label: "Contact" },
+    { id: "home", label: "Home", path: "/" },
+    { id: "about", label: "About", path: "/about" },
+    { id: "projects", label: "Projects", path: "/projects" },
+    { id: "contact", label: "Contact", path: "/contact" },
   ];
 
   const toggleSidebar = () => setIsOpen(!isOpen);
@@ -21,7 +21,7 @@ const Sidebar = ({ activeSection, onSectionChange }: SidebarProps) => {
   return (
     <>
       <button
-        className="mobile-menu-toggle"
+        className={`mobile-menu-toggle ${isOpen ? "active" : ""}`}
         onClick={toggleSidebar}
         aria-label="Toggle menu"
       >
@@ -44,17 +44,15 @@ const Sidebar = ({ activeSection, onSectionChange }: SidebarProps) => {
             <ul>
               {navItems.map((item) => (
                 <li key={item.id}>
-                  <button
+                  <Link
+                    to={item.path}
                     className={`nav-item ${
                       activeSection === item.id ? "active" : ""
                     }`}
-                    onClick={() => {
-                      onSectionChange(item.id);
-                      setIsOpen(false);
-                    }}
+                    onClick={() => setIsOpen(false)}
                   >
                     {item.label}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>

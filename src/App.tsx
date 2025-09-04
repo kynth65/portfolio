@@ -1,42 +1,52 @@
-import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import HeroSection from "./components/HeroSection";
 import ProjectGrid from "./components/ProjectGrid";
 import AboutSection from "./components/AboutSection";
 import ContactSection from "./components/ContactSection";
+import ProjectPage from "./components/ProjectPage";
 import "./App.css";
 
-function App() {
-  const [activeSection, setActiveSection] = useState("home");
-
-  const renderContent = () => {
-    switch (activeSection) {
-      case "about":
-        return <AboutSection />;
-      case "projects":
-        return <ProjectGrid />;
-      case "contact":
-        return <ContactSection />;
-      default:
-        return (
-          <>
-            <HeroSection />
-            <ProjectGrid />
-          </>
-        );
-    }
+function AppContent() {
+  const location = useLocation();
+  const path = location.pathname;
+  
+  // Determine active section based on current route
+  const getActiveSection = () => {
+    if (path === '/about') return 'about';
+    if (path === '/projects' || path.startsWith('/project/')) return 'projects';
+    if (path === '/contact') return 'contact';
+    return 'home';
   };
 
   return (
     <div className="app">
-      <Sidebar
-        activeSection={activeSection}
-        onSectionChange={setActiveSection}
-      />
+      <Sidebar activeSection={getActiveSection()} />
       <main className="main-content">
-        <div className="content-wrapper">{renderContent()}</div>
+        <div className="content-wrapper">
+          <Routes>
+            <Route path="/" element={
+              <>
+                <HeroSection />
+                <ProjectGrid />
+              </>
+            } />
+            <Route path="/about" element={<AboutSection />} />
+            <Route path="/projects" element={<ProjectGrid />} />
+            <Route path="/contact" element={<ContactSection />} />
+            <Route path="/project/:id" element={<ProjectPage />} />
+          </Routes>
+        </div>
       </main>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
   );
 }
 

@@ -1,59 +1,8 @@
+import { Link } from "react-router-dom";
 import "./ProjectGrid.css";
-
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  techStack: string[];
-  liveLink: string;
-  githubLink: string;
-}
+import { projects } from "../data/projects";
 
 const ProjectGrid = () => {
-  const projects: Project[] = [
-    {
-      id: 1,
-      title: "E-Commerce Platform",
-      description:
-        "A full-stack e-commerce solution with React frontend and Node.js backend. Features include user authentication, shopping cart, and payment integration.",
-      image: "/placeholder-project.jpg",
-      techStack: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveLink: "https://example.com",
-      githubLink: "https://github.com",
-    },
-    {
-      id: 2,
-      title: "Task Management App",
-      description:
-        "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "/placeholder-project.jpg",
-      techStack: ["React", "TypeScript", "Firebase", "Tailwind"],
-      liveLink: "https://example.com",
-      githubLink: "https://github.com",
-    },
-    {
-      id: 3,
-      title: "Weather Dashboard",
-      description:
-        "A responsive weather application that displays current weather, forecasts, and historical data with interactive charts and maps.",
-      image: "/placeholder-project.jpg",
-      techStack: ["Vue.js", "Chart.js", "OpenWeather API", "CSS3"],
-      liveLink: "https://example.com",
-      githubLink: "https://github.com",
-    },
-    {
-      id: 4,
-      title: "Portfolio Website",
-      description:
-        "A modern, responsive portfolio website built with React and TypeScript. Features smooth animations and optimized performance.",
-      image: "/placeholder-project.jpg",
-      techStack: ["React", "TypeScript", "Vite", "CSS3"],
-      liveLink: "https://example.com",
-      githubLink: "https://github.com",
-    },
-  ];
-
   return (
     <section className="projects-section">
       <div className="projects-grid">
@@ -97,7 +46,12 @@ const ProjectGrid = () => {
                 ))}
               </div>
 
-              <button className="learn-more-btn">Learn More</button>
+              <Link 
+                to={`/project/${project.id}`}
+                className="learn-more-btn"
+              >
+                Learn More
+              </Link>
             </div>
           </div>
         ))}
