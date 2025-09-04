@@ -23,18 +23,10 @@ const ProjectPage = () => {
         
         <div className="project-page-links">
           <a
-            href={project.liveLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project-page-link primary"
-          >
-            Live Demo
-          </a>
-          <a
             href={project.githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="project-page-link secondary"
+            className="project-page-link primary"
           >
             Source Code
           </a>
@@ -97,14 +89,6 @@ const ProjectPage = () => {
           <div className="project-info-section">
             <h3>Project Links</h3>
             <div className="project-info-links">
-              <a
-                href={project.liveLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="info-link"
-              >
-                View Live Demo
-              </a>
               <a
                 href={project.githubLink}
                 target="_blank"

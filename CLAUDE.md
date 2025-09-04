@@ -46,8 +46,7 @@ Replace blog post cards with project showcase cards containing:
 - Project title
 - Brief description (2-3 lines)
 - Tech stack badges
-- Live demo link
-- GitHub repository link
+- GitHub repository link ONLY (NO live demo links)
 - "Learn More" button
 
 ### Navigation Items
@@ -111,7 +110,7 @@ Replace blog post cards with project showcase cards containing:
 - Project detail modal/page
 - Image galleries for project screenshots
 - Technology stack visualization
-- Live demo and source code links
+- Source code links only (NO live demo buttons/links)
 
 ### Modern Development Practices
 
@@ -129,7 +128,7 @@ Replace blog post cards with project showcase cards containing:
 - Highlight technologies used
 - Include challenges overcome
 - Show before/after or process
-- Link to live demos and code
+- Link to source code only (NO live demos)
 
 ### About Section
 
@@ -164,7 +163,7 @@ Replace blog post cards with project showcase cards containing:
 3. ✅ **Project cards grid** - **IMPLEMENTED**
    - ProjectGrid component with 4 sample projects
    - Project cards with image placeholders, descriptions, tech stacks
-   - Hover overlays with live demo and source code links
+   - Hover overlays with source code links only (NO live demo)
    - Tech stack badges and "Learn More" buttons
 
 4. ✅ **Responsive design basics** - **IMPLEMENTED**

@@ -14,11 +14,13 @@ A modern, responsive portfolio website built with React and TypeScript, showcasi
 ## 🎨 Design System
 
 ### Color Palette
+
 - **Primary Background**: `rgb(253, 250, 241)` - Warm off-white
 - **Accent Color**: `rgb(4, 11, 6)` - Deep forest green
 - **Text Secondary**: `rgb(84, 84, 84)` - Medium gray
 
 ### Typography
+
 - **Font Family**: Manrope (Google Fonts)
 - **Sizes**: 64px (hero), 16px (regular), 12px (small)
 
@@ -33,23 +35,27 @@ A modern, responsive portfolio website built with React and TypeScript, showcasi
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js (v16 or higher)
 - npm or yarn
 
 ### Installation
 
 1. Clone the repository
+
 ```bash
 git clone https://github.com/your-username/portfolio.git
 cd portfolio
 ```
 
 2. Install dependencies
+
 ```bash
 npm install
 ```
 
 3. Start the development server
+
 ```bash
 npm run dev
 ```
@@ -97,17 +103,20 @@ The portfolio adapts to different screen sizes:
 ## 🎯 Key Components
 
 ### Sidebar
+
 - Profile information and navigation
 - Social media links
 - Responsive hamburger menu on mobile
 
 ### Project Grid
+
 - Interactive project cards with hover effects
 - Tech stack badges
 - Live demo and source code links
 - Responsive grid layout
 
 ### Contact Form
+
 - Name, email, and message fields
 - Form validation
 - Professional contact information display
@@ -115,6 +124,7 @@ The portfolio adapts to different screen sizes:
 ## 🚀 Deployment
 
 ### Build for Production
+
 ```bash
 npm run build
 ```
@@ -122,11 +132,13 @@ npm run build
 The `dist` folder will contain the optimized production build.
 
 ### Deploy to Netlify
+
 1. Connect your GitHub repository to Netlify
 2. Set build command to `npm run build`
 3. Set publish directory to `dist`
 
 ### Deploy to Vercel
+
 1. Install Vercel CLI: `npm i -g vercel`
 2. Run `vercel` in the project directory
 3. Follow the prompts
@@ -134,6 +146,7 @@ The `dist` folder will contain the optimized production build.
 ## 🎨 Customization
 
 ### Adding New Projects
+
 Edit `src/components/ProjectGrid.tsx` and add new project objects to the projects array:
 
 ```typescript
@@ -149,6 +162,7 @@ Edit `src/components/ProjectGrid.tsx` and add new project objects to the project
 ```
 
 ### Updating Color Scheme
+
 Modify CSS custom properties in `src/index.css`:
 
 ```css
