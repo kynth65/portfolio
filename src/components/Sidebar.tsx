@@ -34,7 +34,7 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
         <div className="sidebar-content">
           <div className="profile-section">
             <div className="profile-image">
-              <div className="profile-placeholder">KAM</div>
+              <img src="/profile.svg" alt="Kynth Anthony Marcaida" />
             </div>
             <h1 className="profile-name">Kynth Anthony Marcaida</h1>
             <p className="profile-title">Aspiring Full-Stack Web Developer</p>

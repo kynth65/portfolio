@@ -15,14 +15,6 @@ const ProjectGrid = () => {
               <div className="project-overlay">
                 <div className="project-links">
                   <a
-                    href={project.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-link"
-                  >
-                    Live Demo
-                  </a>
-                  <a
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
