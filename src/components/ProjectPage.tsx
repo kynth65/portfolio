@@ -1,16 +1,51 @@
 import { useParams, Link, Navigate } from "react-router-dom";
+import { useState } from "react";
 import { projects } from "../data/projects";
 import "./ProjectPage.css";
 
 const ProjectPage = () => {
   const { id } = useParams<{ id: string }>();
   const projectId = parseInt(id || "0", 10);
-  
-  const project = projects.find(p => p.id === projectId);
-  
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const project = projects.find((p) => p.id === projectId);
+
   if (!project) {
     return <Navigate to="/projects" replace />;
   }
+
+  const openImageModal = (image: string, index: number) => {
+    setSelectedImage(image);
+    setCurrentImageIndex(index);
+  };
+
+  const closeImageModal = () => {
+    setSelectedImage(null);
+  };
+
+  const navigateImage = (direction: 'prev' | 'next') => {
+    if (!project.images) return;
+    
+    const validImages = project.images.filter(img => img && img !== "/placeholder-project.jpg");
+    if (validImages.length === 0) return;
+
+    let newIndex;
+    if (direction === 'next') {
+      newIndex = (currentImageIndex + 1) % validImages.length;
+    } else {
+      newIndex = currentImageIndex === 0 ? validImages.length - 1 : currentImageIndex - 1;
+    }
+    
+    setCurrentImageIndex(newIndex);
+    setSelectedImage(validImages[newIndex]);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Escape') closeImageModal();
+    if (e.key === 'ArrowRight') navigateImage('next');
+    if (e.key === 'ArrowLeft') navigateImage('prev');
+  };
 
   return (
     <div className="project-page">
@@ -20,7 +55,7 @@ const ProjectPage = () => {
         </Link>
         <h1 className="project-page-title">{project.title}</h1>
         <p className="project-page-description">{project.description}</p>
-        
+
         <div className="project-page-links">
           <a
             href={project.githubLink}
@@ -64,9 +99,19 @@ const ProjectPage = () => {
               <div className="image-gallery">
                 {project.images.map((image, index) => (
                   <div key={index} className="gallery-image">
-                    <div className="gallery-placeholder">
-                      Screenshot {index + 1}
-                    </div>
+                    {image && image !== "/placeholder-project.jpg" ? (
+                      <img 
+                        src={image} 
+                        alt={`${project.title} screenshot ${index + 1}`}
+                        className="gallery-img"
+                        onClick={() => openImageModal(image, index)}
+                        style={{ cursor: 'pointer' }}
+                      />
+                    ) : (
+                      <div className="gallery-placeholder">
+                        Screenshot {index + 1}
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -101,6 +146,40 @@ const ProjectPage = () => {
           </div>
         </div>
       </div>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div 
+          className="image-modal-overlay" 
+          onClick={closeImageModal}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
+        >
+          <div className="image-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={closeImageModal}>
+              ×
+            </button>
+            
+            <button className="modal-nav modal-prev" onClick={() => navigateImage('prev')}>
+              ‹
+            </button>
+            
+            <img 
+              src={selectedImage} 
+              alt={`${project.title} screenshot`}
+              className="modal-image"
+            />
+            
+            <button className="modal-nav modal-next" onClick={() => navigateImage('next')}>
+              ›
+            </button>
+            
+            <div className="modal-caption">
+              {`${currentImageIndex + 1} of ${project.images?.filter(img => img && img !== "/placeholder-project.jpg").length || 0}`}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
