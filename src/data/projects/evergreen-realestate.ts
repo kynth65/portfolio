@@ -5,7 +5,7 @@ export const evergreenRealestate: Project = {
   title: "Evergreen - Real Estate & Land Management Platform",
   description: "A comprehensive real estate management system designed for land development companies, featuring multi-role dashboards, payment tracking, and project management capabilities.",
   detailedDescription: "Evergreen is a full-stack real estate management platform that streamlines operations from land acquisition to client management. Built for land development companies managing subdivision projects, it features role-specific dashboards for Super Admins, Agents, Interns, and Clients. The system handles complete property portfolio management, installment payment tracking with automated scheduling, task assignment with progress monitoring, and centralized document management. With specialized tools like Residential Form System (RFS) and OCS Calculator, plus a public-facing marketing website, Evergreen provides end-to-end solutions for modern real estate operations.",
-  image: "/placeholder-project.jpg",
+  image: "/images/projects/evergreen/LandingPage.png",
   techStack: ["Laravel 11", "React 18", "MySQL", "PHP 8.2+", "Vite", "Ant Design", "Tailwind CSS", "Laravel Sanctum", "Framer Motion", "Lucide React"],
   liveLink: "",
   githubLink: "https://github.com/kynth65/evergreen",
@@ -32,8 +32,10 @@ export const evergreenRealestate: Project = {
     "Ensuring data security and privacy compliance for sensitive financial and property information"
   ],
   images: [
-    "/placeholder-project.jpg",
-    "/placeholder-project.jpg",
-    "/placeholder-project.jpg"
+    "/images/projects/evergreen/LandingPage.png",
+    "/images/projects/evergreen/Dashboard.png",
+    "/images/projects/evergreen/LotManagement.png",
+    "/images/projects/evergreen/ClientPayment.png",
+    "/images/projects/evergreen/OCSCalculator.png"
   ]
 };
