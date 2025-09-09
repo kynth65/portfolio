@@ -53,7 +53,7 @@ const ContactSection = () => {
             <div className="contact-method">
               <h4>LinkedIn</h4>
               <a
-                href="https://linkedin.com/in/kynth-marcaida"
+                href="https://www.linkedin.com/in/kynthanthonymarcaida/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -64,7 +64,7 @@ const ContactSection = () => {
             <div className="contact-method">
               <h4>GitHub</h4>
               <a
-                href="https://github.com/kynth-marcaida"
+                href="https://github.com/kynth65"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -127,6 +127,7 @@
   font-family: inherit;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   resize: vertical;
+  box-sizing: border-box;
 }
 
 .form-group input:focus,
