@@ -5,7 +5,7 @@ export const summaflowEsl: Project = {
   title: "SUMMAFLOW - ESL Management System",
   description: "A comprehensive English as Second Language (ESL) management platform that combines AI-powered report generation with complete student and class administration.",
   detailedDescription: "SUMMAFLOW is an innovative ESL management system that revolutionizes how English language instructors manage their students and generate progress reports. The platform seamlessly integrates AI-powered report generation using OpenAI's API with comprehensive student management, scheduling, and payment tracking. Built with modern Laravel and React architecture, it provides educators with powerful tools to upload lesson PDFs, automatically generate personalized student progress summaries, and maintain complete oversight of their teaching business through an intuitive dashboard.",
-  image: "/placeholder-project.jpg",
+  image: "/images/projects/summaflow/LandingPage.png",
   techStack: ["Laravel", "React", "TypeScript", "OpenAI API", "Tailwind CSS", "SQLite", "Vite", "PHP"],
   liveLink: "https://summaflow-demo.com", 
   githubLink: "https://github.com/kynth/summaflow",
@@ -31,8 +31,13 @@ export const summaflowEsl: Project = {
     "Ensuring responsive calendar interface with conflict detection and schedule management"
   ],
   images: [
-    "/placeholder-project.jpg",
-    "/placeholder-project.jpg", 
-    "/placeholder-project.jpg"
+    "/images/projects/summaflow/Dashboard.png",
+    "/images/projects/summaflow/Students.png",
+    "/images/projects/summaflow/Calendar.png",
+    "/images/projects/summaflow/DailySummary1.png",
+    "/images/projects/summaflow/DailySummary2.png",
+    "/images/projects/summaflow/DailySummary3.png",
+    "/images/projects/summaflow/MonthlySummary.png",
+    "/images/projects/summaflow/MonthlyComparisonMonth.png"
   ]
 };
