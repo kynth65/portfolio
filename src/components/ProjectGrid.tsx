@@ -9,9 +9,11 @@ const ProjectGrid = () => {
         {projects.map((project) => (
           <div key={project.id} className="project-card">
             <div className="project-image">
-              <div className="image-placeholder">
-                <span>{project.title.charAt(0)}</span>
-              </div>
+              <img 
+                src={project.image} 
+                alt={project.title}
+                className="project-img"
+              />
               <div className="project-overlay">
                 <div className="project-links">
                   <a
