@@ -142,6 +142,46 @@
   color: var(--text-secondary);
 }
 
+/* Error and success message styles */
+.success-message {
+  background: #f0f9ff;
+  color: #065f46;
+  border: 1px solid #10b981;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.error-message {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #f87171;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.field-error {
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.form-group input.error:focus,
+.form-group textarea.error:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
 .submit-button {
   width: 100%;
   padding: 0.75rem 1.5rem;
