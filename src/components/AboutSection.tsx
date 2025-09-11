@@ -4,7 +4,7 @@ const AboutSection = () => {
   const skills = [
     { category: 'Frontend', items: ['HTML5', 'CSS3', 'JavaScript', 'React', 'TypeScript', 'Vue.js'] },
     { category: 'Backend', items: ['Node.js', 'Python', 'Express', 'MongoDB', 'PostgreSQL', 'REST APIs'] },
-    { category: 'Tools & Others', items: ['Git', 'Docker', 'Webpack', 'Vite', 'ESLint', 'NPM/Yarn'] }
+    { category: 'Tools & Others', items: ['Git', 'Docker', 'Webpack', 'Vite', 'NPM/Yarn'] }
   ]
 
   return (
