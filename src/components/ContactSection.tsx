@@ -74,6 +74,8 @@ const ContactSection = () => {
       };
 
       // Simulate form submission (replace with actual API call)
+      // In a real implementation, you would send sanitizedData to your API
+      console.log('Submitting sanitized data:', sanitizedData);
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       // Reset form on success

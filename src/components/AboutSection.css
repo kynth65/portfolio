@@ -104,17 +104,168 @@
   transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
+/* Mobile: 320px - 768px */
+@media (max-width: 767px) {
+  .about-section {
+    padding: 2rem 0;
+  }
+
   .about-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
   }
   
   .about-text h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    margin: 0 0 1rem 0;
   }
   
   .intro-text {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-text p {
+    margin-bottom: 1rem;
+  }
+
+  .goals-section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .goals-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .skill-category h4 {
+    font-size: 1rem;
+  }
+
+  .skill-badge {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Small Mobile: 320px - 480px */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 1.5rem 0;
+  }
+
+  .about-content {
+    gap: 1.25rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .intro-text {
+    font-size: 0.9rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+
+  .goals-section h3 {
+    font-size: 1rem;
+  }
+
+  .skill-category h4 {
+    font-size: 0.95rem;
+  }
+
+  .skill-badge {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Tablet: 768px - 1024px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .about-section {
+    padding: 3.5rem 0;
+    max-width: 900px;
+  }
+
+  .about-content {
+    gap: 3rem;
+  }
+
+  .about-text h2 {
+    font-size: 2.25rem;
+  }
+
+  .intro-text {
+    font-size: 1.05rem;
+  }
+}
+
+/* Large Desktop: 1440px+ */
+@media (min-width: 1440px) {
+  .about-section {
+    padding: 5rem 0;
+    max-width: 1200px;
+  }
+
+  .about-content {
+    gap: 5rem;
+  }
+
+  .about-text h2 {
+    font-size: 3rem;
+    margin: 0 0 2rem 0;
+  }
+
+  .intro-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+  }
+
+  .goals-section {
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+  }
+
+  .goals-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .goals-section li {
+    padding: 0.75rem 0;
+    padding-left: 2rem;
+    font-size: 1.05rem;
+  }
+
+  .skills-grid h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .skill-category {
+    margin-bottom: 2.5rem;
+  }
+
+  .skill-category h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .skill-items {
+    gap: 0.75rem;
+  }
+
+  .skill-badge {
+    padding: 0.6rem 1.2rem;
     font-size: 1rem;
   }
 }

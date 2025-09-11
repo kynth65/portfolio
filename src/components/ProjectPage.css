@@ -371,75 +371,321 @@
   }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Mobile: 320px - 768px */
+@media (max-width: 767px) {
   .project-page {
-    padding: 1rem;
+    padding: 0.75rem;
+  }
+  
+  .project-page-header {
+    margin-bottom: 2rem;
+  }
+
+  .back-button {
+    font-size: 12px;
+    margin-bottom: 1rem;
   }
   
   .project-page-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    margin: 0 0 0.75rem 0;
   }
   
   .project-page-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin: 0 0 1.5rem 0;
   }
   
   .project-page-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
   }
   
   .project-page-sidebar {
     position: static;
     order: -1;
   }
+
+  .tech-stack-section,
+  .project-info-section {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
   
   .project-page-links {
     justify-content: center;
+    gap: 0.75rem;
   }
   
   .project-page-link {
     flex: 1;
     text-align: center;
-    min-width: 140px;
+    min-width: 130px;
+    padding: 0.65rem 1.5rem;
+    font-size: 12px;
+  }
+
+  .project-section {
+    margin-bottom: 2rem;
+  }
+
+  .project-section h2 {
+    font-size: 1.25rem;
+  }
+
+  .project-section p,
+  .feature-list li,
+  .challenge-list li {
+    font-size: 14px;
   }
   
   .image-gallery {
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
   }
 
   .gallery-image {
     max-width: 100%;
+    border-radius: 8px;
   }
 
   /* Modal responsive styles */
   .modal-close {
-    top: -40px;
-    right: 10px;
-    font-size: 1.5rem;
-    width: 35px;
-    height: 35px;
+    top: -35px;
+    right: 5px;
+    font-size: 1.4rem;
+    width: 32px;
+    height: 32px;
   }
 
   .modal-nav {
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
+    width: 36px;
+    height: 36px;
+    font-size: 1.4rem;
   }
 
   .modal-prev {
-    left: -50px;
+    left: -45px;
   }
 
   .modal-next {
-    right: -50px;
+    right: -45px;
   }
 
   .modal-caption {
-    bottom: -30px;
-    font-size: 12px;
-    padding: 0.4rem 0.8rem;
+    bottom: -25px;
+    font-size: 11px;
+    padding: 0.35rem 0.7rem;
+  }
+}
+
+/* Small Mobile: 320px - 480px */
+@media (max-width: 480px) {
+  .project-page {
+    padding: 0.5rem;
+  }
+
+  .project-page-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .back-button {
+    font-size: 11px;
+  }
+
+  .project-page-title {
+    font-size: 1.5rem;
+  }
+
+  .project-page-description {
+    font-size: 0.9rem;
+  }
+
+  .project-page-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-page-link {
+    min-width: auto;
+    padding: 0.6rem 1.25rem;
+    font-size: 11px;
+  }
+
+  .tech-stack-section,
+  .project-info-section {
+    padding: 1rem;
+  }
+
+  .project-section h2 {
+    font-size: 1.1rem;
+  }
+
+  .project-section p,
+  .feature-list li,
+  .challenge-list li {
+    font-size: 13px;
+  }
+
+  .image-gallery {
+    gap: 1rem;
+  }
+
+  .gallery-image {
+    border-radius: 6px;
+  }
+
+  /* Modal adjustments for small screens */
+  .image-modal-content {
+    max-width: 95vw;
+    max-height: 85vh;
+  }
+
+  .modal-close {
+    top: -30px;
+    right: 0;
+    font-size: 1.2rem;
+    width: 28px;
+    height: 28px;
+  }
+
+  .modal-nav {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+
+  .modal-prev {
+    left: -40px;
+  }
+
+  .modal-next {
+    right: -40px;
+  }
+
+  .modal-caption {
+    bottom: -20px;
+    font-size: 10px;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/* Tablet: 768px - 1024px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .project-page {
+    max-width: 900px;
+    padding: 1.5rem;
+  }
+
+  .project-page-content {
+    grid-template-columns: 1fr 280px;
+    gap: 2.5rem;
+  }
+
+  .project-page-title {
+    font-size: 2.25rem;
+  }
+
+  .project-page-description {
+    font-size: 1.15rem;
+  }
+
+  .tech-stack-section,
+  .project-info-section {
+    padding: 1.25rem;
+  }
+}
+
+/* Large Desktop: 1440px+ */
+@media (min-width: 1440px) {
+  .project-page {
+    max-width: 1400px;
+    padding: 2.5rem;
+  }
+
+  .project-page-header {
+    margin-bottom: 4rem;
+  }
+
+  .back-button {
+    font-size: 16px;
+    margin-bottom: 2rem;
+  }
+
+  .project-page-title {
+    font-size: 3rem;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .project-page-description {
+    font-size: 1.4rem;
+    margin: 0 0 2.5rem 0;
+  }
+
+  .project-page-content {
+    grid-template-columns: 1fr 350px;
+    gap: 4rem;
+  }
+
+  .project-page-links {
+    gap: 1.25rem;
+  }
+
+  .project-page-link {
+    padding: 1rem 2.5rem;
+    font-size: 16px;
+  }
+
+  .project-section {
+    margin-bottom: 4rem;
+  }
+
+  .project-section h2 {
+    font-size: 1.75rem;
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 0.75rem;
+  }
+
+  .project-section p,
+  .feature-list li,
+  .challenge-list li {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+  .feature-list li,
+  .challenge-list li {
+    padding-left: 2rem;
+  }
+
+  .tech-stack-section,
+  .project-info-section {
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .tech-stack-section h3,
+  .project-info-section h3 {
+    font-size: 1.2rem;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .tech-badge {
+    padding: 0.35rem 1rem;
+    font-size: 14px;
+  }
+
+  .info-link {
+    font-size: 16px;
+    padding: 0.75rem 0;
+  }
+
+  .image-gallery {
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .gallery-image {
+    border-radius: 16px;
   }
 }

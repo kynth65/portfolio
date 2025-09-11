@@ -108,23 +108,147 @@
   }
 }
 
-@media (max-width: 768px) {
+/* Mobile: 320px - 768px */
+@media (max-width: 767px) {
   .hero-section {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
+  }
+
+  .hero-tagline {
+    font-size: 32px;
+    margin: 0 0 1rem 0;
+  }
+
+  .hero-subtitle {
+    font-size: 11px;
+    margin: 0 0 1.5rem 0;
   }
   
   .hero-cta {
     flex-direction: column;
     align-items: center;
+    gap: 0.75rem;
   }
   
   .cta-button {
     width: 100%;
     max-width: 250px;
+    padding: 0.65rem 1.25rem;
+    font-size: 11px;
   }
   
   .hero-stats {
     grid-template-columns: 1fr;
     gap: 1rem;
+    padding: 1.5rem 0;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 11px;
+  }
+}
+
+/* Small Mobile: 320px - 480px */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 1rem 0;
+  }
+
+  .hero-tagline {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  .hero-subtitle {
+    font-size: 10px;
+    margin: 0 0 1.25rem 0;
+  }
+
+  .cta-button {
+    padding: 0.6rem 1rem;
+    font-size: 10px;
+    max-width: 200px;
+  }
+
+  .hero-stats {
+    gap: 0.75rem;
+    padding: 1.25rem 0;
+  }
+
+  .stat-number {
+    font-size: 1.75rem;
+  }
+
+  .stat-label {
+    font-size: 10px;
+  }
+}
+
+/* Tablet: 768px - 1024px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-section {
+    padding: 3rem 0;
+  }
+
+  .hero-tagline {
+    font-size: 48px;
+  }
+
+  .hero-cta {
+    gap: 0.85rem;
+  }
+
+  .cta-button {
+    padding: 0.7rem 1.4rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* Large Desktop: 1440px+ */
+@media (min-width: 1440px) {
+  .hero-section {
+    padding: 5rem 0;
+    max-width: 1000px;
+  }
+
+  .hero-tagline {
+    font-size: 72px;
+    margin: 0 0 2rem 0;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    margin: 0 0 2.5rem 0;
+  }
+
+  .hero-cta {
+    gap: 1.25rem;
+  }
+
+  .cta-button {
+    padding: 0.85rem 1.75rem;
+    font-size: 13px;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2.5rem;
+    padding: 2.5rem 0;
+  }
+
+  .stat-number {
+    font-size: 3rem;
+  }
+
+  .stat-label {
+    font-size: 13px;
   }
 }
