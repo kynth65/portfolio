@@ -4,7 +4,7 @@ const AboutSection = () => {
   const skills = [
     { category: 'Frontend', items: ['HTML5', 'CSS3', 'JavaScript', 'React', 'TypeScript', 'Vue.js'] },
     { category: 'Backend', items: ['Node.js', 'Python', 'Express', 'MongoDB', 'PostgreSQL', 'REST APIs'] },
-    { category: 'Tools & Others', items: ['Git', 'Docker', 'Webpack', 'Vite', 'Figma', 'Responsive Design'] }
+    { category: 'Tools & Others', items: ['Git', 'Docker', 'Webpack', 'Vite', 'ESLint', 'NPM/Yarn'] }
   ]
 
   return (
@@ -33,6 +33,7 @@ const AboutSection = () => {
             <ul>
               <li>Master modern React patterns and state management</li>
               <li>Deepen my understanding of backend architecture</li>
+              <li>Build more projects that can hone my skills</li>
               <li>Contribute to meaningful open-source projects</li>
               <li>Build applications that have positive impact</li>
             </ul>
