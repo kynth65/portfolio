@@ -17,7 +17,7 @@ export const agriculturalAnalytics: Project = {
     "Node.js"
   ],
   liveLink: "",
-  githubLink: "https://github.com/kynthmarcaida/agricultural-analytics-dashboard",
+  githubLink: "https://github.com/kynth65/Agricultural-analytics-ai",
   features: [
     "AI-Powered Data Extraction: Intelligent text recognition and context-aware categorization of agricultural information",
     "Multi-Category Processing: Extracts goals, best management practices, quantitative data, implementation plans, and monitoring protocols",
