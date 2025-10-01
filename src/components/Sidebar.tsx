@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import DarkModeToggle from "./DarkModeToggle";
 import "./Sidebar.css";
 
 interface SidebarProps {
@@ -34,7 +35,10 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
         <div className="sidebar-content">
           <div className="profile-section">
             <div className="profile-image">
-              <img src="/images/projects/profile.jpg" alt="Kynth Anthony Marcaida" />
+              <img
+                src="/images/projects/profile.jpg"
+                alt="Kynth Anthony Marcaida"
+              />
             </div>
             <h1 className="profile-name">Kynth Anthony Marcaida</h1>
             <p className="profile-title">Aspiring Full-Stack Web Developer</p>
@@ -78,6 +82,10 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
             <a href="mailto:contact@example.com" aria-label="Email">
               Email
             </a>
+          </div>
+
+          <div className="theme-toggle-container">
+            <DarkModeToggle />
           </div>
         </div>
       </aside>

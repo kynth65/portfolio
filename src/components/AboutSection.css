@@ -35,7 +35,7 @@
 .goals-section {
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(4, 11, 6, 0.1);
+  border-top: 1px solid var(--border-color);
 }
 
 .goals-section h3 {
@@ -89,12 +89,12 @@
 
 .skill-badge {
   padding: 0.5rem 1rem;
-  background: rgba(4, 11, 6, 0.1);
+  background: var(--badge-bg);
   color: var(--accent-color);
   font-size: 0.9rem;
   font-weight: 500;
   border-radius: 1.5rem;
-  border: 1px solid rgba(4, 11, 6, 0.2);
+  border: 1px solid var(--border-strong);
   transition: all 0.2s ease;
 }
 

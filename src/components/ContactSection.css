@@ -52,7 +52,7 @@
 
 .availability {
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(4, 11, 6, 0.1);
+  border-top: 1px solid var(--border-color);
 }
 
 .availability h4 {
@@ -91,10 +91,10 @@
 }
 
 .contact-form {
-  background: rgba(4, 11, 6, 0.02);
+  background: var(--badge-bg-alt);
   padding: 2rem;
   border-radius: 1rem;
-  border: 1px solid rgba(4, 11, 6, 0.1);
+  border: 1px solid var(--border-color);
 }
 
 .contact-form h3 {
@@ -119,9 +119,9 @@
 .form-group textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid rgba(4, 11, 6, 0.2);
+  border: 1px solid var(--border-strong);
   border-radius: 0.5rem;
-  background: var(--primary-bg);
+  background: var(--input-bg);
   color: var(--accent-color);
   font-size: 1rem;
   font-family: inherit;
@@ -134,7 +134,7 @@
 .form-group textarea:focus {
   outline: none;
   border-color: var(--accent-color);
-  box-shadow: 0 0 0 3px rgba(4, 11, 6, 0.1);
+  box-shadow: 0 0 0 3px var(--focus-shadow);
 }
 
 .form-group input::placeholder,

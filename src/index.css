@@ -3,11 +3,24 @@
   line-height: 1.5;
   font-weight: 400;
 
-  /* CSS Custom Properties with IE11 fallbacks */
+  /* Light Mode CSS Custom Properties */
   --primary-bg: rgb(253, 250, 241);
   --accent-color: rgb(4, 11, 6);
   --text-secondary: rgb(84, 84, 84);
-  
+  --card-bg: rgb(255, 255, 255);
+  --border-color: rgba(4, 11, 6, 0.1);
+  --border-strong: rgba(4, 11, 6, 0.2);
+  --shadow: rgba(0, 0, 0, 0.1);
+  --shadow-strong: rgba(0, 0, 0, 0.15);
+  --badge-bg: rgba(4, 11, 6, 0.1);
+  --badge-bg-alt: rgba(4, 11, 6, 0.02);
+  --overlay-bg: rgba(4, 11, 6, 0.8);
+  --overlay-light: rgba(4, 11, 6, 0.05);
+  --input-bg: rgb(253, 250, 241);
+  --focus-shadow: rgba(4, 11, 6, 0.1);
+  --gradient-start: rgba(4, 11, 6, 0.1);
+  --gradient-end: rgba(84, 84, 84, 0.1);
+
   /* Fallbacks for browsers that don't support CSS variables */
   color: rgb(4, 11, 6);
   color: var(--accent-color);
@@ -20,6 +33,42 @@
   -moz-osx-font-smoothing: grayscale;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+}
+
+/* Dark Mode Theme */
+:root[data-theme="dark"] {
+  --primary-bg: rgb(15, 23, 17);
+  --accent-color: rgb(253, 250, 241);
+  --text-secondary: rgb(180, 180, 180);
+  --card-bg: rgb(25, 35, 27);
+  --border-color: rgba(253, 250, 241, 0.1);
+  --border-strong: rgba(253, 250, 241, 0.2);
+  --shadow: rgba(0, 0, 0, 0.5);
+  --shadow-strong: rgba(0, 0, 0, 0.7);
+  --badge-bg: rgba(253, 250, 241, 0.1);
+  --badge-bg-alt: rgba(253, 250, 241, 0.02);
+  --overlay-bg: rgba(253, 250, 241, 0.15);
+  --overlay-light: rgba(253, 250, 241, 0.05);
+  --input-bg: rgb(25, 35, 27);
+  --focus-shadow: rgba(253, 250, 241, 0.2);
+  --gradient-start: rgba(253, 250, 241, 0.1);
+  --gradient-end: rgba(180, 180, 180, 0.1);
+}
+
+/* Smooth theme transitions */
+body,
+a,
+button,
+.sidebar,
+.hero-section,
+.project-card,
+.about-section,
+.contact-section {
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  -o-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 a {
