@@ -82,6 +82,14 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
             <a href="mailto:contact@example.com" aria-label="Email">
               Email
             </a>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Resume"
+            >
+              Resume
+            </a>
           </div>
 
           <div className="theme-toggle-container">

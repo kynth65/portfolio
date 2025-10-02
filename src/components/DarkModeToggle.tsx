@@ -1,26 +1,26 @@
-import { useState, useEffect } from 'react';
-import './DarkModeToggle.css';
+import { useState, useEffect } from "react";
+import "./DarkModeToggle.css";
 
 const DarkModeToggle = () => {
   const [isDark, setIsDark] = useState(() => {
     // Check localStorage for saved theme preference
-    const savedTheme = localStorage.getItem('theme');
+    const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
-      return savedTheme === 'dark';
+      return savedTheme === "dark";
     }
     // Check system preference
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
   });
 
   useEffect(() => {
     // Apply theme to document root
     const root = document.documentElement;
     if (isDark) {
-      root.setAttribute('data-theme', 'dark');
-      localStorage.setItem('theme', 'dark');
+      root.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", "dark");
     } else {
-      root.removeAttribute('data-theme');
-      localStorage.setItem('theme', 'light');
+      root.removeAttribute("data-theme");
+      localStorage.setItem("theme", "light");
     }
   }, [isDark]);
 
@@ -32,11 +32,11 @@ const DarkModeToggle = () => {
     <button
       className="dark-mode-toggle"
       onClick={toggleTheme}
-      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-      title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      title={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
       <div className="toggle-track">
-        <div className={`toggle-thumb ${isDark ? 'dark' : 'light'}`}>
+        <div className={`toggle-thumb ${isDark ? "dark" : "light"}`}>
           {isDark ? (
             <svg
               className="icon moon"
