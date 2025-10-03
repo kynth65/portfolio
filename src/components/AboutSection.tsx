@@ -1,11 +1,53 @@
-import './AboutSection.css'
+import "./AboutSection.css";
 
 const AboutSection = () => {
   const skills = [
-    { category: 'Frontend', items: ['HTML5', 'CSS3', 'JavaScript', 'React', 'TypeScript', 'Vue.js'] },
-    { category: 'Backend', items: ['Node.js', 'Python', 'Express', 'MongoDB', 'PostgreSQL', 'REST APIs'] },
-    { category: 'Tools & Others', items: ['Git', 'Docker', 'Webpack', 'Vite', 'NPM/Yarn'] }
-  ]
+    {
+      category: "Frontend",
+      items: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "TypeScript",
+        "Next.js",
+        "Tailwind CSS",
+        "Ant Design",
+        "Framer Motion",
+      ],
+    },
+    {
+      category: "Backend",
+      items: [
+        "Laravel",
+        "PHP",
+        "Django",
+        "Python",
+        "Node.js",
+        "MySQL",
+        "PostgreSQL",
+        "SQLite",
+        "REST APIs",
+        "Laravel Sanctum",
+        "Django REST Framework",
+      ],
+    },
+    {
+      category: "Tools & Others",
+      items: [
+        "Git",
+        "Vite",
+        "OpenAI API",
+        "Axios",
+        "PHPUnit",
+        "NPM/Yarn",
+        "PDF.js",
+        "Recharts",
+        "Docling",
+        "Langchain",
+      ],
+    },
+  ];
 
   return (
     <section className="about-section">
@@ -13,21 +55,24 @@ const AboutSection = () => {
         <div className="about-text">
           <h2>About Me</h2>
           <p className="intro-text">
-            Hi! I'm Kynth, an aspiring full-stack web developer with a passion for creating 
-            digital solutions that make a difference. My journey in web development started 
-            with curiosity and has evolved into a deep love for clean code and user-centered design.
+            Hi! I'm Kynth, an aspiring full-stack web developer with a passion
+            for creating digital solutions that make a difference. My journey in
+            web development started with curiosity and has evolved into a deep
+            love for clean code and user-centered design.
           </p>
           <p>
-            I believe in the power of technology to solve real-world problems and improve 
-            people's lives. Every project I work on is an opportunity to learn something new 
-            and push the boundaries of what I can create.
+            I believe in the power of technology to solve real-world problems
+            and improve people's lives. Every project I work on is an
+            opportunity to learn something new and push the boundaries of what I
+            can create.
           </p>
           <p>
-            When I'm not coding, you'll find me exploring new technologies, contributing to 
-            open-source projects, or learning about the latest trends in web development. 
-            I'm always excited to take on new challenges and collaborate with other developers.
+            When I'm not coding, you'll find me exploring new technologies,
+            contributing to open-source projects, or learning about the latest
+            trends in web development. I'm always excited to take on new
+            challenges and collaborate with other developers.
           </p>
-          
+
           <div className="goals-section">
             <h3>Current Goals</h3>
             <ul>
@@ -39,7 +84,7 @@ const AboutSection = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="skills-grid">
           <h3>Technical Skills</h3>
           {skills.map((skillGroup, index) => (
@@ -57,7 +102,7 @@ const AboutSection = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default AboutSection
+export default AboutSection;

@@ -1,7 +1,7 @@
 import type { Project } from '../types';
 
 export const aiInvoiceManagement: Project = {
-  id: 5,
+  id: 8,
   title: "AI Invoice Management System",
   description: "Django-based invoice management system with AI-powered data extraction using OpenAI GPT-4o-mini for automated processing and business analytics.",
   detailedDescription: "A comprehensive Django web application that revolutionizes invoice processing through AI automation. The system handles complete invoice workflows from upload to payment, featuring AI-powered data extraction that automatically reads and processes PDF and image invoices. Built with Django 5.2.6 and Python 3.13, it integrates OpenAI GPT-4o-mini for intelligent document processing, vendor management with duplicate detection, and provides real-time business analytics with expense summaries, budget alerts, and spending trends. The system includes both RESTful APIs and a web interface with AJAX support for seamless user experience.",

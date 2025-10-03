@@ -7,25 +7,17 @@ const ProjectGrid = () => {
     <section className="projects-section">
       <div className="projects-grid">
         {projects.map((project) => (
-          <div key={project.id} className="project-card">
+          <Link
+            key={project.id}
+            to={`/project/${project.id}`}
+            className="project-card"
+          >
             <div className="project-image">
-              <img 
-                src={project.image} 
+              <img
+                src={project.image}
                 alt={project.title}
                 className="project-img"
               />
-              <div className="project-overlay">
-                <div className="project-links">
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-link"
-                  >
-                    Source Code
-                  </a>
-                </div>
-              </div>
             </div>
 
             <div className="project-content">
@@ -40,14 +32,11 @@ const ProjectGrid = () => {
                 ))}
               </div>
 
-              <Link 
-                to={`/project/${project.id}`}
-                className="learn-more-btn"
-              >
-                Learn More
-              </Link>
+              <span className="learn-more-btn">
+                Learn More →
+              </span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

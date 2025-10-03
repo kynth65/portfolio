@@ -164,8 +164,8 @@
   display: none;
 }
 
-/* Mobile: 320px - 768px */
-@media (max-width: 767px) {
+/* Mobile: Under 1240px */
+@media (max-width: 1239px) {
   .mobile-menu-toggle {
     display: flex;
     top: 0.75rem;
@@ -259,25 +259,6 @@
   }
 }
 
-/* Tablet: 768px - 1024px */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .sidebar {
-    width: 240px;
-  }
-
-  .sidebar-content {
-    padding: 1.75rem 1.25rem;
-  }
-
-  .profile-image img {
-    width: 75px;
-    height: 75px;
-  }
-
-  .profile-name {
-    font-size: 15px;
-  }
-}
 
 /* Large Desktop: 1440px+ */
 @media (min-width: 1440px) {
