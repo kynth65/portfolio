@@ -7,9 +7,13 @@ A modern, responsive portfolio website built with React and TypeScript, showcasi
 - **Modern Design**: Clean, professional interface with warm color palette
 - **Responsive Layout**: Mobile-first design that works on all devices
 - **Project Showcase**: Interactive project cards with tech stack badges
+- **Individual Project Pages**: Detailed project views with image galleries
+- **URL Routing**: Direct links to individual projects
 - **Contact Integration**: Functional contact form with validation
 - **Smooth Animations**: Hover effects and transitions throughout
 - **SEO Optimized**: Semantic HTML structure for better search visibility
+- **Security**: XSS protection with DOMPurify
+- **Browser Compatibility**: Legacy browser support via Vite Legacy Plugin
 
 ## 🎨 Design System
 
@@ -27,9 +31,11 @@ A modern, responsive portfolio website built with React and TypeScript, showcasi
 ## 🛠️ Tech Stack
 
 - **Frontend**: React 19.1.1 + TypeScript
-- **Build Tool**: Vite 7.1.2
+- **Routing**: React Router DOM 7.8.2
+- **Build Tool**: Vite 7.1.2 with Legacy Plugin
 - **Styling**: Vanilla CSS with CSS Custom Properties
 - **Fonts**: Google Fonts (Manrope)
+- **Security**: DOMPurify 3.2.6
 - **Development**: ESLint for code quality
 
 ## 🚀 Getting Started
@@ -68,21 +74,34 @@ npm run dev
 portfolio/
 ├── public/
 │   ├── vite.svg
-│   └── placeholder-project.jpg
+│   └── [project-images]/        # Project screenshots
 ├── src/
 │   ├── components/
 │   │   ├── Sidebar.tsx           # Navigation and profile
 │   │   ├── HeroSection.tsx       # Main tagline section
 │   │   ├── ProjectGrid.tsx       # Project showcase
+│   │   ├── ProjectPage.tsx       # Individual project pages
 │   │   ├── AboutSection.tsx      # Personal info and skills
 │   │   ├── ContactSection.tsx    # Contact form
 │   │   └── *.css                 # Component styles
-│   ├── App.tsx                   # Main application
+│   ├── data/
+│   │   ├── types.ts              # TypeScript interfaces
+│   │   └── projects/
+│   │       ├── index.ts          # Project data exports
+│   │       ├── _template.ts      # Project template
+│   │       ├── summaflow-esl.ts
+│   │       ├── nurseinfo-healthcare.ts
+│   │       ├── evergreen-realestate.ts
+│   │       ├── agricultural-analytics.ts
+│   │       ├── ai-invoice-management.ts
+│   │       └── portfolio-website.ts
+│   ├── App.tsx                   # Main application with routing
 │   ├── main.tsx                  # React entry point
 │   └── index.css                 # Global styles
 ├── index.html
 ├── package.json
-└── vite.config.ts
+├── vite.config.ts
+└── CLAUDE.md                     # Project documentation
 ```
 
 ## 🔧 Available Scripts
@@ -112,8 +131,18 @@ The portfolio adapts to different screen sizes:
 
 - Interactive project cards with hover effects
 - Tech stack badges
-- Live demo and source code links
-- Responsive grid layout
+- Source code links only (NO live demos)
+- Responsive grid layout (3 cols → 2 cols → 1 col)
+- Individual project detail pages with routing
+- Image galleries with modal functionality
+
+### Featured Projects
+
+1. **SUMMAFLOW ESL Platform** - Language learning management system
+2. **NurseInfo Healthcare** - Healthcare management dashboard
+3. **Evergreen Real Estate** - Property management platform
+4. **Agricultural Analytics** - Farm data visualization dashboard
+5. **AI Invoice Management** - Automated invoice processing system
 
 ### Contact Form
 
@@ -147,19 +176,31 @@ The `dist` folder will contain the optimized production build.
 
 ### Adding New Projects
 
-Edit `src/components/ProjectGrid.tsx` and add new project objects to the projects array:
+1. Copy the template file `src/data/projects/_template.ts`
+2. Create a new file in `src/data/projects/` (e.g., `my-project.ts`)
+3. Fill in the project details following the `Project` interface:
 
 ```typescript
-{
-  id: 5,
-  title: "Your Project",
-  description: "Project description",
-  image: "/path-to-image.jpg",
-  techStack: ["React", "TypeScript"],
-  liveDemo: "https://demo-url.com",
-  sourceCode: "https://github.com/your-repo"
-}
+import { Project } from '../types';
+
+export const myProject: Project = {
+  id: 'my-project',
+  title: "My Project",
+  description: "Brief description",
+  longDescription: "Detailed description...",
+  image: "/my-project-1.jpg",
+  images: ["/my-project-1.jpg", "/my-project-2.jpg"],
+  techStack: ["React", "TypeScript", "Node.js"],
+  category: "Web Development",
+  date: "2025-01",
+  sourceCode: "https://github.com/username/repo",
+  features: ["Feature 1", "Feature 2"],
+  challenges: "Challenges overcome...",
+  outcome: "Results achieved..."
+};
 ```
+
+4. Export the project in `src/data/projects/index.ts`
 
 ### Updating Color Scheme
 
