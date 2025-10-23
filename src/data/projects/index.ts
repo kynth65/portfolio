@@ -3,7 +3,7 @@ import { nurseinfoHealthcare } from './nurseinfo-healthcare';
 import { evergreenRealestate } from './evergreen-realestate';
 import { agriculturalAnalytics } from './agricultural-analytics';
 import { aiInvoiceManagement } from './ai-invoice-management';
-import { dailyWritingApp } from './daily-writing-app';
+import { quill } from './quill';
 
 export const projects = [
   summaflowEsl,
@@ -11,7 +11,7 @@ export const projects = [
   evergreenRealestate,
   agriculturalAnalytics,
   aiInvoiceManagement,
-  dailyWritingApp
+  quill
 ];
 
 export * from './summaflow-esl';
@@ -19,4 +19,4 @@ export * from './nurseinfo-healthcare';
 export * from './evergreen-realestate';
 export * from './agricultural-analytics';
 export * from './ai-invoice-management';
-export * from './daily-writing-app';
+export * from './quill';
