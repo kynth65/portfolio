@@ -83,7 +83,7 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
               Email
             </a>
             <a
-              href="/resume.pdf"
+              href="/Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View Resume"
