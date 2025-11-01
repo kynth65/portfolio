@@ -27,4 +27,4 @@ dist-ssr
 
 # Claude Code AI files
 CLAUDE.md
-.claude/
+.claude
