@@ -21,7 +21,7 @@ export const quill: Project = {
     "PWA"
   ],
   liveLink: "",
-  githubLink: "https://github.com/kynthmarcaida/daily-writing-app",
+  githubLink: "https://github.com/kynth65/daily-writing-app.git",
   features: [
     "Rich Text Editor: TipTap-based editor with autosave and distraction-free interface",
     "AI-Powered Insights: Automatic sentiment analysis, mood tracking, and AI-generated weekly/monthly reflections",
