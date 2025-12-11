@@ -3,7 +3,7 @@ import type { Project } from '../types';
 export const agriculturalAnalytics: Project = {
   id: 4,
   title: "Agricultural Data Analytics Dashboard",
-  description: "AI-powered web application that extracts, analyzes, and visualizes structured data from agricultural management documents using advanced natural language processing.",
+  description: "Transforming days of manual document analysis into minutes — helping agricultural researchers extract insights from complex PDFs using AI to make data-driven environmental decisions.",
   detailedDescription: "A sophisticated web application that leverages artificial intelligence to transform complex PDF documents into organized, interactive datasets. The system automates the extraction of agricultural information including goals, best management practices, quantitative data, implementation timelines, and monitoring protocols. Built for agricultural researchers, government agencies, and environmental consultants who need to process large volumes of agricultural documentation efficiently and accurately.",
   image: "/images/projects/agriculture/landing-page.png",
   techStack: [
@@ -18,6 +18,8 @@ export const agriculturalAnalytics: Project = {
   ],
   liveLink: "",
   githubLink: "https://github.com/kynth65/Agricultural-analytics-ai",
+  duration: "2 weeks",
+  complexity: "Intermediate",
   features: [
     "AI-Powered Data Extraction: Intelligent text recognition and context-aware categorization of agricultural information",
     "Multi-Category Processing: Extracts goals, best management practices, quantitative data, implementation plans, and monitoring protocols",

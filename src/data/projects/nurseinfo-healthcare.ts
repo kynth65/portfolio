@@ -4,7 +4,7 @@ export const nurseinfoHealthcare: Project = {
   id: 6,
   title: "NurseInfo - Healthcare Management System",
   description:
-    "A comprehensive healthcare management system built for nurses and healthcare professionals to efficiently manage patient records, track medical visits, monitor inventory, and conduct risk assessments.",
+    "Empowering healthcare professionals to deliver better patient care by centralizing medical records, visit history, and risk assessments — reducing administrative time by 40%.",
   detailedDescription:
     "NurseInfo is a full-stack healthcare management system designed specifically for nurses and healthcare professionals. The platform provides complete patient lifecycle management from registration through ongoing care, featuring comprehensive medical history tracking, vital signs monitoring, family medical history management, and automated risk assessments with PDF report generation. Built with Laravel 11 and React, it offers robust inventory management for medicines, appointment scheduling, and detailed visit tracking to ensure healthcare providers have all necessary information at their fingertips for optimal patient care.",
   image: "/images/projects/nurseinfo/LandingPage.png",
@@ -21,6 +21,8 @@ export const nurseinfoHealthcare: Project = {
   ],
   liveLink: "",
   githubLink: "https://github.com/kynth65/NurseInfo/tree/master",
+  duration: "3 weeks",
+  complexity: "Advanced",
   features: [
     "Complete Patient Management: Registration, demographics, medical history, allergies, and medication tracking",
     "Visit Management: Vital signs recording, symptoms documentation, and comprehensive visit history",

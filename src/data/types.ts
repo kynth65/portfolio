@@ -10,4 +10,5 @@ export interface Project {
   features: string[];
   challenges: string[];
   images: string[];
+  duration?: string; // e.g., "3 months", "6 weeks"
 }

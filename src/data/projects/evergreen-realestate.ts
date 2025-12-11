@@ -3,12 +3,14 @@ import type { Project } from '../types';
 export const evergreenRealestate: Project = {
   id: 7,
   title: "Evergreen - Real Estate & Land Management Platform",
-  description: "A comprehensive real estate management system designed for land development companies, featuring multi-role dashboards, payment tracking, and project management capabilities.",
+  description: "Streamlining land development operations from acquisition to client management — helping real estate teams track properties, automate payment schedules, and close deals 30% faster.",
   detailedDescription: "Evergreen is a full-stack real estate management platform that streamlines operations from land acquisition to client management. Built for land development companies managing subdivision projects, it features role-specific dashboards for Super Admins, Agents, Interns, and Clients. The system handles complete property portfolio management, installment payment tracking with automated scheduling, task assignment with progress monitoring, and centralized document management. With specialized tools like Residential Form System (RFS) and OCS Calculator, plus a public-facing marketing website, Evergreen provides end-to-end solutions for modern real estate operations.",
   image: "/images/projects/evergreen/LandingPage.png",
   techStack: ["Laravel 11", "React 18", "MySQL", "PHP 8.2+", "Vite", "Ant Design", "Tailwind CSS", "Laravel Sanctum", "Framer Motion", "Lucide React"],
   liveLink: "",
   githubLink: "https://github.com/kynth65/evergreen",
+  duration: "2 months",
+  complexity: "Advanced",
   features: [
     "Complete Land Management: Property portfolio management with detailed land records and status tracking",
     "Lot Management: Individual lot tracking within development projects with geographic data integration",
