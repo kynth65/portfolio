@@ -5,6 +5,7 @@ import ProjectGrid from "./components/ProjectGrid";
 import AboutSection from "./components/AboutSection";
 import ContactSection from "./components/ContactSection";
 import ProjectPage from "./components/ProjectPage";
+import ScrollToTop from "./components/ScrollToTop";
 import "./App.css";
 
 function AppContent() {
@@ -45,6 +46,7 @@ function AppContent() {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <AppContent />
     </Router>
   );
