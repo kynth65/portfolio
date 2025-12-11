@@ -96,12 +96,44 @@
   border-radius: 1.5rem;
   border: 1px solid var(--border-strong);
   transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
 }
 
 .skill-badge:hover {
   background: var(--accent-color);
   color: var(--primary-bg);
   transform: translateY(-2px);
+}
+
+.skill-years {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  font-weight: 400;
+  padding-left: 0.25rem;
+  border-left: 1px solid currentColor;
+  padding-left: 0.5rem;
+}
+
+.skill-badge:hover .skill-years {
+  opacity: 1;
+}
+
+/* Proficiency level indicators */
+.skill-badge.skill-advanced {
+  border-color: var(--accent-color);
+  font-weight: 600;
+}
+
+.skill-badge.skill-intermediate {
+  border-color: var(--border-strong);
+}
+
+.skill-badge.skill-beginner {
+  border-color: var(--border-color);
+  opacity: 0.85;
 }
 
 /* Mobile: 320px - 768px */

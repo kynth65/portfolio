@@ -123,6 +123,12 @@
   color: var(--accent-color);
 }
 
+.nav-item:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--focus-shadow);
+}
+
 .nav-item.active {
   background: var(--accent-color);
   color: var(--primary-bg);
@@ -148,6 +154,13 @@
 
 .social-links a:hover {
   color: var(--accent-color);
+}
+
+.social-links a:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--focus-shadow);
+  border-radius: 0.25rem;
 }
 
 .theme-toggle-container {

@@ -36,7 +36,7 @@
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 4px 20px var(--shadow);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
@@ -46,8 +46,18 @@
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 40px var(--shadow-strong);
+  transform: translateY(-8px);
+  box-shadow:
+    0 10px 40px var(--shadow-strong),
+    0 0 0 1px var(--accent-color);
+}
+
+.project-card:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 4px;
+  box-shadow:
+    0 10px 40px var(--shadow-strong),
+    0 0 0 4px var(--focus-shadow);
 }
 
 .project-image {
@@ -76,7 +86,7 @@
 }
 
 .project-title {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--accent-color);
   margin: 0 0 0.75rem 0;
@@ -102,10 +112,11 @@
   padding: 0.25rem 0.75rem;
   background: var(--badge-bg);
   color: var(--accent-color);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
   border-radius: 1rem;
   border: 1px solid var(--border-strong);
+  opacity: 0.8;
 }
 
 .learn-more-btn {

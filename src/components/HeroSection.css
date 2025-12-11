@@ -10,7 +10,7 @@
 }
 
 .hero-tagline {
-  font-size: 64px;
+  font-size: 48px;
   font-weight: 700;
   color: var(--accent-color);
   line-height: 1.2;
@@ -19,10 +19,11 @@
 }
 
 .hero-subtitle {
-  font-size: 12px;
+  font-size: 16px;
   color: var(--text-secondary);
   margin: 0 0 2rem 0;
   line-height: 1.5;
+  letter-spacing: 0.5px;
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
@@ -195,7 +196,11 @@
   }
 
   .hero-tagline {
-    font-size: 48px;
+    font-size: 44px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
   }
 
   .hero-cta {
@@ -220,12 +225,12 @@
   }
 
   .hero-tagline {
-    font-size: 72px;
+    font-size: 56px;
     margin: 0 0 2rem 0;
   }
 
   .hero-subtitle {
-    font-size: 14px;
+    font-size: 18px;
     margin: 0 0 2.5rem 0;
   }
 
