@@ -19,7 +19,6 @@ export const agriculturalAnalytics: Project = {
   liveLink: "",
   githubLink: "https://github.com/kynth65/Agricultural-analytics-ai",
   duration: "2 weeks",
-  complexity: "Intermediate",
   features: [
     "AI-Powered Data Extraction: Intelligent text recognition and context-aware categorization of agricultural information",
     "Multi-Category Processing: Extracts goals, best management practices, quantitative data, implementation plans, and monitoring protocols",

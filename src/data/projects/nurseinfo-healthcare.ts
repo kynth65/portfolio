@@ -22,7 +22,6 @@ export const nurseinfoHealthcare: Project = {
   liveLink: "",
   githubLink: "https://github.com/kynth65/NurseInfo/tree/master",
   duration: "3 weeks",
-  complexity: "Advanced",
   features: [
     "Complete Patient Management: Registration, demographics, medical history, allergies, and medication tracking",
     "Visit Management: Vital signs recording, symptoms documentation, and comprehensive visit history",

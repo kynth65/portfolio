@@ -10,7 +10,6 @@ export const aiInvoiceManagement: Project = {
   liveLink: "",
   githubLink: "https://github.com/kynth65/ai-invoice-management",
   duration: "1 week",
-  complexity: "Intermediate",
   features: [
     "AI-Powered Data Extraction: OpenAI GPT-4o-mini automatically extracts invoice data from PDFs and images",
     "Intelligent Vendor Management: Automatic vendor detection, normalization, and duplicate prevention",

@@ -21,7 +21,6 @@ export const summaflowEsl: Project = {
   liveLink: "https://summaflow-demo.com",
   githubLink: "https://github.com/kynth65/esl-report-generator",
   duration: "2 weeks",
-  complexity: "Advanced",
   features: [
     "AI-Powered Report Generation: Upload lesson PDFs and generate personalized student progress summaries",
     "Daily, Monthly, and Comparison Reports: Comprehensive tracking of student progress over time",

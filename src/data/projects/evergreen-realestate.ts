@@ -10,7 +10,6 @@ export const evergreenRealestate: Project = {
   liveLink: "",
   githubLink: "https://github.com/kynth65/evergreen",
   duration: "2 months",
-  complexity: "Advanced",
   features: [
     "Complete Land Management: Property portfolio management with detailed land records and status tracking",
     "Lot Management: Individual lot tracking within development projects with geographic data integration",
