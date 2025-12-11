@@ -5,46 +5,46 @@ const AboutSection = () => {
     {
       category: "Frontend",
       items: [
-        "HTML5",
-        "CSS3",
-        "JavaScript",
-        "React",
-        "TypeScript",
-        "Next.js",
-        "Tailwind CSS",
-        "Ant Design",
-        "Framer Motion",
+        { name: "HTML5", level: "advanced", years: "3+" },
+        { name: "CSS3", level: "advanced", years: "3+" },
+        { name: "JavaScript", level: "advanced", years: "3+" },
+        { name: "React", level: "advanced", years: "2+" },
+        { name: "TypeScript", level: "intermediate", years: "1+" },
+        { name: "Next.js", level: "intermediate", years: "1+" },
+        { name: "Tailwind CSS", level: "advanced", years: "2+" },
+        { name: "Ant Design", level: "intermediate", years: "1+" },
+        { name: "Framer Motion", level: "beginner", years: "<1" },
       ],
     },
     {
       category: "Backend",
       items: [
-        "Laravel",
-        "PHP",
-        "Django",
-        "Python",
-        "Node.js",
-        "MySQL",
-        "PostgreSQL",
-        "SQLite",
-        "REST APIs",
-        "Laravel Sanctum",
-        "Django REST Framework",
+        { name: "Laravel", level: "advanced", years: "2+" },
+        { name: "PHP", level: "advanced", years: "2+" },
+        { name: "Django", level: "intermediate", years: "1+" },
+        { name: "Python", level: "intermediate", years: "1+" },
+        { name: "Node.js", level: "intermediate", years: "1+" },
+        { name: "MySQL", level: "advanced", years: "2+" },
+        { name: "PostgreSQL", level: "intermediate", years: "1+" },
+        { name: "SQLite", level: "intermediate", years: "1+" },
+        { name: "REST APIs", level: "advanced", years: "2+" },
+        { name: "Laravel Sanctum", level: "intermediate", years: "1+" },
+        { name: "Django REST Framework", level: "intermediate", years: "1+" },
       ],
     },
     {
       category: "Tools & Others",
       items: [
-        "Git",
-        "Vite",
-        "OpenAI API",
-        "Axios",
-        "PHPUnit",
-        "NPM/Yarn",
-        "PDF.js",
-        "Recharts",
-        "Docling",
-        "Langchain",
+        { name: "Git", level: "advanced", years: "3+" },
+        { name: "Vite", level: "intermediate", years: "1+" },
+        { name: "OpenAI API", level: "intermediate", years: "1+" },
+        { name: "Axios", level: "advanced", years: "2+" },
+        { name: "PHPUnit", level: "intermediate", years: "1+" },
+        { name: "NPM/Yarn", level: "advanced", years: "2+" },
+        { name: "PDF.js", level: "beginner", years: "<1" },
+        { name: "Recharts", level: "intermediate", years: "1+" },
+        { name: "Docling", level: "beginner", years: "<1" },
+        { name: "Langchain", level: "beginner", years: "<1" },
       ],
     },
   ];
@@ -55,22 +55,24 @@ const AboutSection = () => {
         <div className="about-text">
           <h2>About Me</h2>
           <p className="intro-text">
-            Hi! I'm Kynth, an aspiring full-stack web developer with a passion
-            for creating digital solutions that make a difference. My journey in
-            web development started with curiosity and has evolved into a deep
-            love for clean code and user-centered design.
+            From debugging my first HTML page at 2am to building full-stack
+            platforms that serve real users — my journey in web development has
+            been driven by one question: "How can I make this better?"
           </p>
           <p>
-            I believe in the power of technology to solve real-world problems
-            and improve people's lives. Every project I work on is an
-            opportunity to learn something new and push the boundaries of what I
-            can create.
+            I'm Kynth, a full-stack web developer who believes the best solutions
+            come from understanding both the technical challenges and the people
+            who'll use what we build. Whether it's crafting intuitive user
+            interfaces with React or architecting robust backends with Laravel and
+            Django, I approach every project with curiosity and a commitment to
+            quality.
           </p>
           <p>
-            When I'm not coding, you'll find me exploring new technologies,
-            contributing to open-source projects, or learning about the latest
-            trends in web development. I'm always excited to take on new
-            challenges and collaborate with other developers.
+            Each project you'll see in my portfolio represents not just code, but
+            problems solved, lessons learned, and real-world impact. From ESL
+            education platforms to healthcare management systems, I've had the
+            privilege of turning complex requirements into elegant, functional
+            solutions.
           </p>
 
           <div className="goals-section">
@@ -92,8 +94,13 @@ const AboutSection = () => {
               <h4>{skillGroup.category}</h4>
               <div className="skill-items">
                 {skillGroup.items.map((skill, skillIndex) => (
-                  <span key={skillIndex} className="skill-badge">
-                    {skill}
+                  <span
+                    key={skillIndex}
+                    className={`skill-badge skill-${skill.level}`}
+                    data-level={skill.level}
+                    title={skill.level}
+                  >
+                    {skill.name}
                   </span>
                 ))}
               </div>

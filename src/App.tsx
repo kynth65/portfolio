@@ -6,6 +6,7 @@ import AboutSection from "./components/AboutSection";
 import ContactSection from "./components/ContactSection";
 import ProjectPage from "./components/ProjectPage";
 import ScrollToTop from "./components/ScrollToTop";
+import BackToTop from "./components/BackToTop";
 import "./App.css";
 
 function AppContent() {
@@ -39,6 +40,7 @@ function AppContent() {
           </Routes>
         </div>
       </main>
+      <BackToTop />
     </div>
   );
 }

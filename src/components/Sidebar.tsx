@@ -79,7 +79,7 @@ const Sidebar = ({ activeSection }: SidebarProps) => {
             >
               LinkedIn
             </a>
-            <a href="mailto:contact@example.com" aria-label="Email">
+            <a href="mailto:kynth65@gmail.com" aria-label="Email">
               Email
             </a>
             <a

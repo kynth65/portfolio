@@ -49,6 +49,14 @@ const ProjectPage = () => {
 
   return (
     <div className="project-page">
+      <nav className="breadcrumb">
+        <Link to="/" className="breadcrumb-link">Home</Link>
+        <span className="breadcrumb-separator">/</span>
+        <Link to="/projects" className="breadcrumb-link">Projects</Link>
+        <span className="breadcrumb-separator">/</span>
+        <span className="breadcrumb-current">{project.title}</span>
+      </nav>
+
       <div className="project-page-header">
         <Link to="/projects" className="back-button">
           ← Back to Projects
@@ -120,6 +128,21 @@ const ProjectPage = () => {
         </div>
 
         <div className="project-page-sidebar">
+          {project.duration && (
+            <div className="project-meta-section">
+              <h3>Project Details</h3>
+              <div className="meta-items">
+                {project.duration && (
+                  <div className="meta-item">
+                    <span className="meta-label">Duration</span>
+                    <span className="meta-value">{project.duration}</span>
+                  </div>
+                )}
+                
+              </div>
+            </div>
+          )}
+
           <div className="tech-stack-section">
             <h3>Technology Stack</h3>
             <div className="tech-stack-list">
@@ -145,6 +168,38 @@ const ProjectPage = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Project Navigation */}
+      <div className="project-navigation">
+        {(() => {
+          const currentIndex = projects.findIndex(p => p.id === projectId);
+          const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
+          const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
+
+          return (
+            <>
+              {prevProject && (
+                <Link to={`/project/${prevProject.id}`} className="project-nav-link prev">
+                  <span className="nav-arrow">←</span>
+                  <div className="nav-info">
+                    <span className="nav-label">Previous Project</span>
+                    <span className="nav-title">{prevProject.title}</span>
+                  </div>
+                </Link>
+              )}
+              {nextProject && (
+                <Link to={`/project/${nextProject.id}`} className="project-nav-link next">
+                  <div className="nav-info">
+                    <span className="nav-label">Next Project</span>
+                    <span className="nav-title">{nextProject.title}</span>
+                  </div>
+                  <span className="nav-arrow">→</span>
+                </Link>
+              )}
+            </>
+          );
+        })()}
       </div>
 
       {/* Image Modal */}
